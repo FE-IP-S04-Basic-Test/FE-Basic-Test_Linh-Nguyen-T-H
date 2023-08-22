@@ -1,0 +1,4 @@
+- File CSS thường được thêm vào HTML documents ở thẻ thẻ <link> trong phần head.
+
+-File JS nên được thêm vào HTML documents ở cuối thẻ body sau khi đã thêm xong cấu trúc html. 
+Bởi vì để HTML có thể render tất cả các thẻ trước khi gọi các thẻ này ra trong file JS để tương tác.

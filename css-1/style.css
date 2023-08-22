@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.btn {
+  padding: 8px 16px;
+
+  border-radius: 16px;
+  border: none;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  background-color: #f3f3f3;
+  color: #1e1e1e;
+
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background-color: rgba(243, 243, 243, 0.4);
+  color: rgba(30, 30, 30, 0.4);
+
+  cursor: default;
+}
+
+.btn.btn-checked {
+}
+
+.btn.btn-primary {
+  background-color: #7269ef;
+  color: #ffffff;
+}
+
+.btn.btn-primary:disabled {
+  background-color: rgba(114, 105, 239, 0.4);
+  color: #ffffff;
+}
+
+.btn.btn-outline {
+  border: 1px solid #9ea0a8;
+
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+.btn.btn-outline:disabled {
+  background-color: rgba(158, 160, 168, 0.4);
+  color: rgba(30, 30, 30, 0.4);
+  border-color: rgba(30, 30, 30, 0.4);
+}
+
+.btn.btn-outline-primary {
+  background-color: #ffffff;
+  color: #7269ef;
+  border: 1px solid #7269ef;
+}
+
+.btn.btn-outline-primary:disabled {
+  background-color: #ffffff;
+  color: rgba(114, 105, 239, 0.4);
+  border: 1px solid rgba(114, 105, 239, 0.4);
+}
+
+.btn.btn-sm {
+  padding: 4px 16px;
+}
