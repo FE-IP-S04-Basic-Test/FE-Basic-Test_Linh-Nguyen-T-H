@@ -1,5 +1,5 @@
 h5 {
-  margin-right: 20px;
+  margin-right: 60px;
 }
 
 .tooltip {
@@ -39,4 +39,19 @@ h5 {
 }
 
 .bottom {
+  top: 150%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.left {
+  top: 50%;
+  right: 150%;
+  margin-top: -15px;
+}
+
+.right {
+  top: 50%;
+  left: 150%;
+  margin-top: -15px;
 }

@@ -1,6 +1,7 @@
 const mergeArray = (arr1, arr2) => {
   const output = [];
   const arr = arr1.concat(arr2);
+
   arr.map((item) => {
     const a = output.find((i) => i.id === item.id);
     if (a) {
@@ -9,7 +10,8 @@ const mergeArray = (arr1, arr2) => {
       output.push(item);
     }
   });
-  console.log(output);
+
+  //console.log(output);
 };
 
 mergeArray(
