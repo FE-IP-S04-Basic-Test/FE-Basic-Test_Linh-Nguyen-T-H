@@ -54,20 +54,34 @@ const data = {
   ],
 };
 
-const addToCart = ({ name, ice, sugar, quantity }) => {
+const addToCart = ({ product_id, ice_id, sugar_id, quantity }) => {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  console.log(cart);
 
-  const product_name = data.products.find((item) => item.name === name);
-  const ice_amount = data.ices.find((item) => item.amount === ice);
-  const sugar_amount = data.sugars.find((item) => item.amount === sugar);
+  const product = data.products.find((item) => item.id === product_id);
+  const ice = data.ices.find((item) => item.id === ice_id);
+  const sugar = data.sugars.find((item) => item.id === sugar_id);
 
-  const cartItem = {
-    product: product_name,
-    ice: ice_amount,
-    sugar: sugar_amount,
-    quantity: quantity,
-  };
+  const cartItem = cart.find(
+    (item) =>
+      item.product.id === product_id &&
+      item.ice.id === ice_id &&
+      item.sugar.id === sugar_id
+  );
 
-  cart.push(cartItem);
+  if (cartItem) {
+    cartItem.quantity += quantity;
+  } else {
+    cart.push({
+      product: product,
+      ice: ice,
+      sugar: sugar,
+      quantity: quantity,
+    });
+  }
+
   localStorage.setItem('cart', JSON.stringify(cart));
 };
+
+addToCart({ product_id: 1, ice_id: 2, sugar_id: 2, quantity: 6 });
+addToCart({ product_id: 2, ice_id: 1, sugar_id: 2, quantity: 6 });
