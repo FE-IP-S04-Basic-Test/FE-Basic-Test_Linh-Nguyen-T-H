@@ -11,18 +11,20 @@ const mergeArray = (arr1, arr2) => {
     }
   });
 
-  //console.log(output);
+  return output;
 };
 
-mergeArray(
-  [
-    { id: '1', quantity: 2 },
-    { id: '2', quantity: 2 },
-    { id: '3', quantity: 3 },
-    { id: '1', quantity: 3 },
-  ],
-  [
-    { id: '1', quantity: 2 },
-    { id: '3', quantity: 2 },
-  ]
+console.log(
+  mergeArray(
+    [
+      { id: '1', quantity: 2 },
+      { id: '2', quantity: 2 },
+      { id: '3', quantity: 3 },
+      { id: '1', quantity: 3 },
+    ],
+    [
+      { id: '1', quantity: 2 },
+      { id: '3', quantity: 2 },
+    ]
+  )
 );
